@@ -1,4 +1,4 @@
-# 🔐 AI Model Trust Boundary Audit
+# AI Model Trust Boundary Audit
 
 **Master of IT Security – Artificial Intelligence, Ontario Tech University — Portfolio Project**
 **By Md. Fuad Alam**
@@ -7,7 +7,7 @@ An audit of 2,809 real Hugging Face repositories, asking a question the ecosyste
 
 ---
 
-## 📌 The Problem
+## The Problem
 
 A "model" on Hugging Face is not one file. It is a bundle of eight to twenty: some weights, some inert documentation, and several that are **executable configuration** — Jinja2 chat templates, tokenizer rules, custom Python modules. These are interpreted at runtime and can change what the model does, but every scanner in the pipeline treats them as trusted settings.
 
@@ -15,7 +15,7 @@ In 2026, researchers demonstrated a poisoned Jinja2 chat template passing Huggin
 
 Those papers proved the attacks are *possible*. **Nobody had measured how wide that surface actually is.** This project does.
 
-## 📊 Results (n = 2,809 repositories)
+## Results (n = 2,809 repositories)
 
 ### Finding 1 — Most of the artifact is executable configuration
 
@@ -30,7 +30,7 @@ Those papers proved the attacks are *possible*. **Nobody had measured how wide t
 
 Median 4 executable-config files per repository; the largest ships 2,110.
 
-### Finding 2 — The coverage gap ⭐
+### Finding 2 — The coverage gap
 
 Hugging Face runs its own security pipeline and publishes the verdict. Of the repositories with a completed scan, **94.7% are marked completely clean**. Among those clean repositories:
 
